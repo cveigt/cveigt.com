@@ -3,7 +3,7 @@
   --text: #ffffff;
   --text-secondary: #d1d1d1;
   --accent: #3b82f6;
-  --card-bg: #141414;
+  --card-bg: #252525;
 }
 
 * {
@@ -296,7 +296,7 @@ figcaption {
 }
 
 .about-section {
-  margin: 2rem 0 4rem;
+  margin: -2rem 0 4rem;
 }
 
 .about-section p {
@@ -449,4 +449,13 @@ figcaption {
 
 .project-card.disabled:hover {
   transform: none;
+}
+
+.profile-pic {
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 2rem;
+  border-radius: 12px;
+  background: var(--card-bg);
 }

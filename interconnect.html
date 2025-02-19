@@ -29,9 +29,14 @@
       <section class="project-section">
         <h2>About Telnyx</h2>
         <p>
-          Telnyx is a global communications platform and carrier-grade network
-          powering secure, high-quality voice calls, messaging, wireless,
-          numbering, fax, and more.
+          Telnyx is a wireless and video-focused communications API that
+          developers use to integrate communication solutions with their
+          applications.
+        </p>
+        <p>
+          Telnyx's Mission Control is an enterprise customer portal used for
+          setup, account management, product and resource configuration, and
+          debugging.
         </p>
       </section>
 
@@ -39,27 +44,248 @@
       <section class="project-section">
         <h2>Context</h2>
         <p>
-          As Telnyx's product offering grew, the need for a unified design
-          system became evident. The Interconnect Component Library was created
-          to ensure consistency across all products while improving development
-          efficiency and user experience.
+          I joined the company in 2019. The core team decided to migrate the
+          Portal front-end from Angular to React. Upon joining, I discovered
+          that while there was purportedly a design system in place, upon closer
+          examination of the design files and codebase, it became evident that
+          it was more of a style guide and a React component library that did
+          not seem to scale or be adopted across the platform.
         </p>
+        <p>Some of the identified issues were:</p>
+        <ul>
+          <li>Absence of a component library.</li>
+          <li>
+            Mismatch between the style guide and production implementation.
+          </li>
+          <li>Lack of a single source of truth.</li>
+          <li>Custom components and styling.</li>
+          <li>Lack of common patterns.</li>
+          <li>Poor accessibility.</li>
+          <li>Challenging designer-developer handoff.</li>
+        </ul>
       </section>
 
-      <!-- Role Section -->
+      <!-- Role & Problem Section -->
       <section class="project-section">
         <h2>My role</h2>
         <p>
-          As the lead designer for the Interconnect library, I was responsible
-          for:
+          I was a solo designer leading efforts on the design side and
+          supporting the front-end development team.
+        </p>
+      </section>
+
+      <section class="project-section">
+        <h2>Problem</h2>
+        <p>The process from ideation to production was slow and painful.</p>
+      </section>
+
+      <section class="project-section">
+        <h2>Challenge</h2>
+        <p>Make communication easier between designers and developers.</p>
+      </section>
+
+      <section class="project-section">
+        <h2>Solution</h2>
+        <p>
+          While we lacked resources to build a fully-fledged design system, we
+          decided to iterate over existing elements and focus more on shared
+          language and less on processes and tools.
+        </p>
+      </section>
+
+      <!-- Interface Inventory Section -->
+      <section class="project-section">
+        <h2>Interface inventory</h2>
+        <p>
+          After auditing our portal application, I found numerous
+          inconsistencies in styles, particularly in colors and typographic
+          hierarchy. Additionally, there were many accessibility issues and
+          custom/recycled components that were meant to have the same appearance
+          and behavior but did not.
+        </p>
+        <img
+          src="images/project-interconnect-image-01.png"
+          alt="Interface inventory showcase"
+          class="showcase-image"
+        />
+      </section>
+
+      <!-- Color Palette Section -->
+      <section class="project-section">
+        <h2>Color palette and mapping</h2>
+        <figure>
+          <img
+            src="images/project-interconnect-image-02.png"
+            alt="Color palette and token mapping"
+            class="showcase-image"
+          />
+          <figcaption>
+            Original colors in Figma vs Code, and failed color contrast ratios.
+          </figcaption>
+        </figure>
+        <p>
+          Based on existing colors and brand guidelines, I reduced the number of
+          shades and simplified the palette. Additionally, I adjusted some
+          colors to meet accessibility standards (WCAG 2.1 level AA).
+        </p>
+        <img
+          src="images/project-interconnect-image-04.png"
+          alt="Interface inventory showcase"
+          class="showcase-image"
+        />
+      </section>
+
+      <!-- Components Section -->
+      <section class="project-section">
+        <h2>Components</h2>
+        <p>
+          Since I was the sole designer working concurrently with other
+          initiatives, the strategy for building or fixing components was to
+          address them as needed for new projects. The scope was to fix or
+          create the React component, its Figma counterpart, and add basic
+          documentation.
+        </p>
+        <img
+          src="images/project-interconnect-image-05.png"
+          alt="Interface inventory showcase"
+          class="showcase-image"
+        />
+        <figure>
+          <img
+            src="images/project-interconnect-image-06.png"
+            alt="Component library overview"
+            class="showcase-image"
+          />
+          <figcaption>
+            Component structure in Figma, code, and component rendered.
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- Handoff Section -->
+      <section class="project-section">
+        <h2>Handoff</h2>
+        <p>
+          With limited development resources, I collaborated with various
+          front-end developers depending on the project we were implementing at
+          a given time. Consequently, the handoff process varied, as some
+          engineers were less detail-oriented and some were more familiar with
+          Figma than others.
+        </p>
+        <img
+          src="images/project-interconnect-image-07.png"
+          alt="Design handoff process"
+          class="showcase-image"
+        />
+      </section>
+
+      <!-- Architecture Section -->
+      <section class="project-section">
+        <h2>Architecture</h2>
+        <p>
+          Until that point, styles and components for the product and website
+          were separate in Figma but shared in the front-end. I decided to align
+          the Figma library structure with this and reduce maintenance overhead.
+        </p>
+        <img
+          src="images/project-interconnect-image-08.png"
+          alt="Design system architecture"
+          class="showcase-image"
+        />
+        <img
+          src="images/project-interconnect-image-09.png"
+          alt="Design system architecture"
+          class="showcase-image"
+        />
+      </section>
+
+      <!-- Documentation Section -->
+      <section class="project-section">
+        <h2>Documentation</h2>
+        <p>
+          Since there were no plans to open-source or release this as a
+          public-facing system and lacked resources for a dedicated
+          documentation site, I set up a Notion space in a couple of days. This
+          served as a place to document components, styles, and design
+          decisions.
+        </p>
+        <img
+          src="images/project-interconnect-image-10.png"
+          alt="Documentation in Notion"
+          class="showcase-image"
+        />
+        <img
+          src="images/project-interconnect-image-11.png"
+          alt="Documentation in Notion"
+          class="showcase-image"
+        />
+        <img
+          src="images/project-interconnect-image-12.png"
+          alt="Documentation in Notion"
+          class="showcase-image"
+        />
+      </section>
+
+      <!-- Advocacy Section -->
+      <section class="project-section">
+        <h2>Advocacy and education</h2>
+        <p>
+          In addition to technical work, I shared concepts and best practices
+          with designers and engineers less familiar with design systems, aiming
+          to not only educate but also encourage usage and collaboration.
+        </p>
+        <img
+          src="images/project-interconnect-image-13.png"
+          alt="Design system advocacy"
+          class="showcase-image"
+        />
+      </section>
+
+      <!-- Results Section -->
+      <section class="project-section">
+        <h2>Results</h2>
+        <p>
+          Although we lacked a proper tool to measure results and impact, we
+          used Jira metrics and anecdotal evidence from consumers for insights
+          on improvements.
         </p>
         <ul>
-          <li>Establishing design foundations and principles</li>
-          <li>Creating and documenting reusable components</li>
-          <li>Collaborating with engineering on implementation</li>
-          <li>Ensuring accessibility standards were met</li>
-          <li>Managing the component library in Figma</li>
+          <li>~ 15% Improve in implementation time.</li>
+          <li>Significant improvement in task completion rate.</li>
+          <li>More efficient design <> developer collaboration and handoff.</li>
+          <li>Evident consistency in the product's UI.</li>
         </ul>
+        <figure>
+          <img
+            src="images/project-interconnect-image-14.png"
+            alt="Results and metrics"
+            class="showcase-image"
+          />
+          <figcaption>Examples of improved UI.</figcaption>
+        </figure>
+      </section>
+
+      <!-- Learnings Section -->
+      <section class="project-section">
+        <h2>Learnings</h2>
+        <h3>Small changes can make a big impact</h3>
+        <p>
+          Establishing a shared language and a simple, well-architected
+          component library improved communication between teams and increased
+          efficiency.
+        </p>
+
+        <h3>Share the problem</h3>
+        <p>
+          Sharing problems and pains with developers fostered trust, empathy,
+          and partnership beyond designers. One of the main reasons I attribute
+          the success of this project is the help I got from engineers.
+        </p>
+        <img
+          src="images/project-interconnect-image-15.png"
+          alt="Project learnings"
+          class="showcase-image"
+        />
       </section>
     </main>
 

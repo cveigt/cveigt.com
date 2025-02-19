@@ -283,10 +283,15 @@ a:visited {
   margin-bottom: 0;
 }
 
+figure {
+  margin-bottom: 3rem;
+}
+
 figcaption {
   color: var(--text-secondary);
   text-align: center;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   font-size: 0.875rem;
 }
 

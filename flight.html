@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helios Design System - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="nav-component"></div>
+
+    <main>
+      <!-- Hero Section -->
+      <header class="project-hero">
+        <h1>Flight Icon System</h1>
+        <p>Designing icons to support a design system.</p>
+      </header>
+
+      <!-- Main Project Image -->
+      <div class="project-showcase">
+        <img
+          src="images/project-flight-cover.png"
+          alt="Helios Design System Interface"
+          class="showcase-image"
+        />
+      </div>
+
+      <!-- Context Section -->
+      <section class="project-section">
+        <p>
+          When I joined the design system core team at HashiCorp, they were
+          working on introducing a standalone icon library. As I love designing
+          icons and had experience working with icon systems, I quickly took
+          ownership of the library.
+        </p>
+      </section>
+
+      <!-- Problem Section -->
+      <section class="project-section">
+        <h2>Workflow</h2>
+        <p>
+          We leveraged Figma's REST API to create a script that fetches the
+          icons from the published Figma file, then transforms them into SVGs,
+          making them as easy to consume for engineers as they are for
+          designers, while keeping them in sync.
+        </p>
+        <img
+          src="images/project-flight-image-01.png"
+          alt="Flight Icon System Workflow"
+          class="showcase-image"
+        />
+      </section>
+
+      <!-- Icon Creation Section -->
+      <section class="project-section">
+        <h2>Icon creation</h2>
+        <p>
+          To ensure consistency across icons, we established some high-level
+          design guidelines and a process for drawing, adding, and publishing
+          new icons.
+        </p>
+        <img
+          src="images/project-flight-image-02.png"
+          alt="Flight Icon Creation Process"
+          class="showcase-image"
+        />
+        <p>
+          Since our script loops over each icon or element present in the
+          library file during the build process, I have a separate development
+          file where the icon creation happens. Once an icon has been made,
+          reviewed, approved, and is ready to be added to the library, I add a
+          flattened and optimized version to the production file and keep the
+          original in the development file for future reference or updates.
+        </p>
+        <img
+          src="images/project-flight-image-03.png"
+          alt="Flight Icon Creation Process"
+          class="showcase-image"
+        />
+        <img
+          src="images/project-flight-image-08.png"
+          alt="Flight Icon Creation Process"
+          class="showcase-image"
+        />
+      </section>
+
+      <!-- Figma Library Section -->
+      <section class="project-section">
+        <h2>Figma library</h2>
+        <p>
+          The Figma library publishes two sizes of each icon, following a
+          consistent naming convention and categorized into three different
+          categories: Core, Product, Services, and Animated.
+        </p>
+        <img
+          src="images/project-flight-image-05.png"
+          alt="Flight Figma Library"
+          class="showcase-image"
+        />
+      </section>
+
+      <!-- Code Library Section -->
+      <section class="project-section">
+        <h2>Code library</h2>
+        <p>
+          We automated the build process and used GitHub actions to run our
+          script. Then, I open a pull request, which is then merged and
+          released.
+        </p>
+        <img
+          src="images/project-flight-image-06.png"
+          alt="Flight Figma Library"
+          class="showcase-image"
+        />
+        <p>
+          Once a new package is available, the new icons are added to the icon
+          section of the documentation website.
+        </p>
+        <img
+          src="images/project-flight-image-07.png"
+          alt="Flight Figma Library"
+          class="showcase-image"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024. All rights reserved.</p>
+    </footer>
+    <script src="./js/components.js"></script>
+  </body>
+</html>

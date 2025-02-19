@@ -442,3 +442,11 @@ figcaption {
   color: var(--text-secondary);
   font-size: 0.875rem;
 }
+
+.project-card.disabled {
+  cursor: not-allowed;
+}
+
+.project-card.disabled:hover {
+  transform: none;
+}

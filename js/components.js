@@ -40,7 +40,11 @@ function initThemeToggle() {
   const storedTheme = localStorage.getItem("theme");
   const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
 
+  console.log("Initial Theme:", initialTheme); // Debugging line
+
+  // Apply the initial theme
   document.body.classList.toggle("light-theme", initialTheme === "light");
+  document.body.classList.toggle("dark-mode", initialTheme === "dark"); // Ensure dark mode is also applied
 
   // Add event listener after nav is loaded
   setTimeout(() => {
@@ -48,8 +52,12 @@ function initThemeToggle() {
     if (themeToggle) {
       themeToggle.addEventListener("click", () => {
         const isLight = document.body.classList.toggle("light-theme");
+        document.body.classList.toggle("dark-mode", !isLight); // Toggle dark mode accordingly
         localStorage.setItem("theme", isLight ? "light" : "dark");
+        console.log("Theme toggled to:", isLight ? "light" : "dark"); // Debugging line
       });
+    } else {
+      console.error("Theme toggle button not found!"); // Debugging line
     }
   }, 100);
 }

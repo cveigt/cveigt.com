@@ -32,3 +32,27 @@ function copyEmail() {
     }, 2000);
   });
 }
+
+// Theme toggle functionality
+function initThemeToggle() {
+  // Initialize theme from localStorage or system preference
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const storedTheme = localStorage.getItem("theme");
+  const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
+
+  document.body.classList.toggle("light-theme", initialTheme === "light");
+
+  // Add event listener after nav is loaded
+  setTimeout(() => {
+    const themeToggle = document.querySelector(".theme-toggle");
+    if (themeToggle) {
+      themeToggle.addEventListener("click", () => {
+        const isLight = document.body.classList.toggle("light-theme");
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+      });
+    }
+  }, 100);
+}
+
+// Call theme toggle initialization after DOM content is loaded
+document.addEventListener("DOMContentLoaded", initThemeToggle);

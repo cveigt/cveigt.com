@@ -520,7 +520,6 @@ figcaption {
 
 .theme-toggle {
   background: none;
-  border: none;
   cursor: pointer;
   padding: 0.5rem;
   color: var(--text);
@@ -529,15 +528,30 @@ figcaption {
   justify-content: center;
   border-radius: 6px;
   transition: background-color 0.2s;
+  border: none;
+  position: relative;
+}
+
+.theme-toggle::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.theme-toggle:hover::after {
+  opacity: 1;
 }
 
 .theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.theme-toggle svg {
-  width: 20px;
-  height: 20px;
+  color: var(--accent);
 }
 
 /* Show/hide icons based on theme */
@@ -555,9 +569,4 @@ figcaption {
 
 .light-theme .moon-icon {
   display: none;
-}
-
-/* Light theme adjustments for toggle */
-.light-theme .theme-toggle:hover {
-  background: rgba(0, 0, 0, 0.1);
 }
